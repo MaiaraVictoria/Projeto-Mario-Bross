@@ -1,7 +1,7 @@
 body{
     font-family: 'Poppins';
 }
-/* ponto serve para estilizar uma classe que ja existe, sem o ponto o css entende que é uma tag*/
+
 .cabecalho{
     
     display: flex;
@@ -50,9 +50,6 @@ body{
     height:calc(100vh - 133px) ;
     padding: 0 30px 30px;
 
-    /* calc serve fazer um  calculo para que sua tela esteja alinhada sem que outros valores atrapalhe*/
-    /* vh= altura da tela  no navegador, de acordo com o tamanho da tela, porem junta a altura total, contando com a margem;
-    para centralizar no meio é preciso determinar altura e largura ; */
 }
 .contaner .imagem-titulo{
     max-width: 500px;
@@ -63,7 +60,7 @@ body{
     width: 85%;
     font-size: 18px;
     margin: 30px 0; }
-    /* coloar 2 valores em um comando, significa que esta determinando o tamanho total*/
+   
 
 .container .botao-trailer{
    background-color: #ff021f;
@@ -71,29 +68,29 @@ body{
    padding:15px ;
    font-size:18px;
    font-weight: bold;
-    /*cursor pointer= tranforma em botão e o rato vira um mão*/
+   
  cursor: pointer;
  border: none;
  text-transform:uppercase;
  transition: 0.5s all ease-in-out;
 }
-/*toda vez que precisarmos fazer alguma função com o mause, temos que criar abrir um bloco com a classe de ond esta esse botão e usar a key= hover  // .nome-da-classe:hover */
+
 
 .container .botao-trailer:hover{
  transform: scale(1.2);
 }
-/*Ctrl+; = vira cometario e desfaz a funçao também*/
+
 .fundo-video{
     background-color: red;
   
-   /*sempre saber o momento certo de usar o position!!*/
+   
    z-index: -2;
    width: 100vw;
    height: 100vh;
    overflow: hidden; 
    position: absolute;
   
-   /*Serve para determinar que esse conteude deve ser colocado no eixo z ou seja no eixe de profundidade. Nesse caso, quero que esse video oculpe o fundo total da tela, então temos que usar o width e o height , e usar o valor em 100. vh= largura*/
+  
    display:flex;
    justify-content: center;
 }
@@ -122,7 +119,7 @@ body{
     top: 0;
     left: 0;
     background-color:rgba(51, 52, 50, 0.749) ;
-   /*rgba é um comando que representa uma mistura de cores e que serva para dar opacidade, e dando valores exatos ele mostra as cores escritas, e a opaicidade ou transferencia é de 0.749*/ 
+   
    visibility: hidden;
 
 }
@@ -159,5 +156,5 @@ body{
 
     opacity: 1;
     visibility: visible;
-    /* quando usamos .aberto , quer dizer que eu quero usar a classe modal, porem algo que não faça parte dessa classe, algo quem vem de fora*/
+  
 }

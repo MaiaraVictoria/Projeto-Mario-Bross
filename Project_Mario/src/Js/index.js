@@ -28,7 +28,7 @@
    // toggle poder subistituir o add e o remove pq ele vê se ja existe essa funçao, assim não deixa redundante
   
   
-  //2) quando o usuario clicar no X fechar modal
+  
   botaoFecharModal.addEventListener ("click", () => {
      //fechar modal
     alternarModal();

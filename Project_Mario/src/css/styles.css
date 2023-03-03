@@ -1,0 +1,163 @@
+body{
+    font-family: 'Poppins';
+}
+/* ponto serve para estilizar uma classe que ja existe, sem o ponto o css entende que é uma tag*/
+.cabecalho{
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.cabecalho .logo {
+    width: 65px;
+
+}
+
+.cabecalho .menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.cabecalho nav li a{
+    
+    font-weight:bold;
+    color: #ffffff;
+    font-size:25px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.3s ;
+
+   
+}
+
+.cabecalho nav li a:hover { 
+    background-color: #d5011b;
+    
+}  
+
+
+.container{
+   
+    max-width: 1440px;
+    margin:0 auto ;
+    display: flex;
+    align-items: center;
+   
+    height:calc(100vh - 133px) ;
+    padding: 0 30px 30px;
+
+    /* calc serve fazer um  calculo para que sua tela esteja alinhada sem que outros valores atrapalhe*/
+    /* vh= altura da tela  no navegador, de acordo com o tamanho da tela, porem junta a altura total, contando com a margem;
+    para centralizar no meio é preciso determinar altura e largura ; */
+}
+.contaner .imagem-titulo{
+    max-width: 500px;
+}
+
+.container .descricao {
+    color:#a8abb7 ;
+    width: 85%;
+    font-size: 18px;
+    margin: 30px 0; }
+    /* coloar 2 valores em um comando, significa que esta determinando o tamanho total*/
+
+.container .botao-trailer{
+   background-color: #ff021f;
+   color: #ffffff;
+   padding:15px ;
+   font-size:18px;
+   font-weight: bold;
+    /*cursor pointer= tranforma em botão e o rato vira um mão*/
+ cursor: pointer;
+ border: none;
+ text-transform:uppercase;
+ transition: 0.5s all ease-in-out;
+}
+/*toda vez que precisarmos fazer alguma função com o mause, temos que criar abrir um bloco com a classe de ond esta esse botão e usar a key= hover  // .nome-da-classe:hover */
+
+.container .botao-trailer:hover{
+ transform: scale(1.2);
+}
+/*Ctrl+; = vira cometario e desfaz a funçao também*/
+.fundo-video{
+    background-color: red;
+  
+   /*sempre saber o momento certo de usar o position!!*/
+   z-index: -2;
+   width: 100vw;
+   height: 100vh;
+   overflow: hidden; 
+   position: absolute;
+  
+   /*Serve para determinar que esse conteude deve ser colocado no eixo z ou seja no eixe de profundidade. Nesse caso, quero que esse video oculpe o fundo total da tela, então temos que usar o width e o height , e usar o valor em 100. vh= largura*/
+   display:flex;
+   justify-content: center;
+}
+
+.fundo-video .video{
+    height: 100vh;
+}
+
+.fundo-video::after{
+    content: "";
+    background-color:black;
+    height: 100vh;
+    width:100vw;
+    position: absolute;
+    top:0;
+    left:0;
+   
+
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
+}
+.modal{
+    
+    position:fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color:rgba(51, 52, 50, 0.749) ;
+   /*rgba é um comando que representa uma mistura de cores e que serva para dar opacidade, e dando valores exatos ele mostra as cores escritas, e a opaicidade ou transferencia é de 0.749*/ 
+   visibility: hidden;
+
+}
+.conteudo-modal{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    border-radius: 5px;
+     gap: 15px;
+
+}
+
+.fechar-modal{
+    background-color: #ffffff;
+    color:#f03a17;
+    font-weight: bold;
+    font-size:20px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.modal iframe{
+    border-width: 0;
+    width:640px ;
+    height:360px;
+}
+
+.modal.aberto{
+
+    opacity: 1;
+    visibility: visible;
+    /* quando usamos .aberto , quer dizer que eu quero usar a classe modal, porem algo que não faça parte dessa classe, algo quem vem de fora*/
+}
